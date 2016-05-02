@@ -1,3 +1,7 @@
+# Hide the config from access
+Redirect 404 /wp-config.php
+
+# Pretty urls
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
