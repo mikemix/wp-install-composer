@@ -23,4 +23,4 @@ Fine tune the `public/wp-config.php` file.
 
 ## Test with the PHP server
 
-`php -S 0.0.0.0:8080 -t public`
+`php -S 0.0.0.0:8080 -t web`
