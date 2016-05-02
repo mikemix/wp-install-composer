@@ -21,12 +21,16 @@ define('NONCE_SALT',       'put your unique phrase here');
 
 define('WP_DEBUG', false);
 define('WP_DEFAULT_THEME', 'mytheme');
-define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
-define('WP_CONTENT_URL', 'http://your.site.com/wp-content');
-define('WP_SITEURL', 'http://your.site.com/wp');
-define('WP_HOME', 'http://your.site.com');
+
+define('YOUR_SITE_DOMAIN', 'your.site.com');
 
 #####################################################
 # CHANGE NOTHING BEYOND THIS POINT
+
+define('WP_CONTENT_DIR', __DIR__ . '/assets');
+define('WP_CONTENT_URL', 'http://'. YOUR_SITE_DOMAIN .'/assets');
+define('WP_SITEURL', 'http://'. YOUR_SITE_DOMAIN .'/wp');
+define('WP_HOME', 'http://' . YOUR_SITE_DOMAIN);
+
 defined('ABSPATH') or define('ABSPATH', __DIR__ . '/');
 require_once(ABSPATH . 'wp-settings.php');
