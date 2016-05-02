@@ -1,0 +1,36 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress",
+                "type": "webroot",
+                "version": "4.5.1",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.5.1.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "1.0.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "wordpress": "^4.5",
+        "fancyguy/webroot-installer": "1.0.0"
+    },
+    "extra": {
+        "webroot-dir": "public/wp",
+        "webroot-package": "wordpress"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp -R public/wp/{wp-content,index.php} public/",
+            "cp -n dist/wp-config.php public/wp-config.php",
+            "sed -i 's/wp/wp\\/wp/' public/index.php",
+            "rm public/wp-content/plugins/hello.php || true",
+            "rm -rf public/wp-content/themes/twenty* || true"
+        ]
+    }
+}
