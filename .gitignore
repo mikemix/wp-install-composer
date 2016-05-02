@@ -2,3 +2,4 @@
 /vendor
 /public
 /composer.phar
+/composer.lock
