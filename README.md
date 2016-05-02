@@ -3,6 +3,10 @@
 Original instructions
 https://davidwinter.me/install-and-manage-wordpress-with-composer/
 
+## You don't have the Composer?
+
+Download from [the Composer site](https://getcomposer.org/download/) then `mv composer.phar /usr/bin`
+
 ## Step 1
 
 Create empty directory for the server root, then navigate to it and download:
@@ -13,7 +17,7 @@ Create empty directory for the server root, then navigate to it and download:
 
 ## Step 2
 
-Install Wordpress and run post install scripts:
+Install Wordpress and trigger post install scripts:
 
 `composer install && composer install`
 
