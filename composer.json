@@ -29,7 +29,7 @@
             "rm -rf web/wp/wp-content",
             "cp -Rn web/wp/index.php web/index.php",
             "cp -n dist/wp-config.php web/wp-config.php",
-            "sed -i 's/wp/wp\\/wp/' web/index.php"
+            "sed -i 's/wp-/wp\\/wp-/' web/index.php"
         ]
     }
 }
