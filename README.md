@@ -7,8 +7,9 @@ https://davidwinter.me/install-and-manage-wordpress-with-composer/
 
 Create empty directory for the server root, then navigate to it and download:
 
-`mkdir /var/www/wordpress && cd /var/www/wordpress`
-`git clone https://github.com/mikemix/wp-install-composer.git .`
+* `mkdir /var/www/wordpress`
+* `cd /var/www/wordpress`
+* `git clone https://github.com/mikemix/wp-install-composer.git .`
 
 ## Step 2
 
