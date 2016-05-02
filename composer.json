@@ -26,7 +26,9 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "rm -rf web/wp/wp-content",
+            "mv web/wp/wp-content web/assets",
+            "rm -rf web/assets/themes/twenty* || true",
+            "rm web/assets/plugins/hello.php || true",
             "cp -Rn web/wp/index.php web/index.php",
             "cp -n dist/wp-config.php web/wp-config.php",
             "sed -i 's/wp-/wp\\/wp-/' web/index.php"
