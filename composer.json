@@ -26,7 +26,8 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cp -R public/wp/{wp-content,index.php} public/",
+            "cp -R public/wp/wp-content public/",
+            "cp -Rn public/wp/index.php public/index.php",
             "cp -n dist/wp-config.php public/wp-config.php",
             "sed -i 's/wp/wp\\/wp/' public/index.php",
             "rm public/wp-content/plugins/hello.php || true",
