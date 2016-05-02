@@ -11,4 +11,8 @@ Install Wordpress and run post install scripts:
 
 ## Step 2
 
-Fine tune the `wp-config.php` file.
+Fine tune the `public/wp-config.php` file.
+
+## Test with the PHP server
+
+`php -S 0.0.0.0:8080 -t public`
